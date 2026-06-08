@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.85rem;
+
+    /* Light theme — navy on off-white with sage accent */
+    --background: 210 33% 99%;
+    --foreground: 210 50% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 12%;
+
+    --primary: 210 73% 15%; /* navy #0A2540 */
+    --primary-foreground: 210 33% 99%;
+
+    --secondary: 176 34% 47%; /* sage #4DA6A0 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 14% 42%;
+
+    --accent: 176 36% 52%; /* sage 500 */
+    --accent-foreground: 210 50% 12%;
+
+    --border: 210 22% 90%;
+    --input: 210 22% 90%;
+    --ring: 176 34% 47%;
+  }
+
+  .dark {
+    --background: 210 56% 9%; /* navy 900 */
+    --foreground: 210 30% 96%;
+
+    --card: 210 55% 12%;
+    --card-foreground: 210 30% 96%;
+
+    --primary: 176 38% 55%; /* sage in dark mode */
+    --primary-foreground: 210 56% 9%;
+
+    --secondary: 176 34% 47%;
+    --secondary-foreground: 210 56% 9%;
+
+    --muted: 210 40% 16%;
+    --muted-foreground: 210 18% 70%;
+
+    --accent: 176 38% 55%;
+    --accent-foreground: 210 56% 9%;
+
+    --border: 210 35% 20%;
+    --input: 210 35% 20%;
+    --ring: 176 38% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+  ::selection {
+    @apply bg-sage-500/30 text-navy;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Section eyebrow / kicker */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-sage-700 dark:text-sage-400;
+  }
+
+  /* Subtle dotted grid texture used behind hero / CTA panels */
+  .bg-dotgrid {
+    background-image: radial-gradient(
+      rgba(85, 180, 174, 0.18) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  /* Gradient text for the UPWARD wordmark accents */
+  .text-gradient-sage {
+    @apply bg-sage-gradient bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .container-tight {
+    @apply mx-auto w-full max-w-5xl px-6;
+  }
+}
