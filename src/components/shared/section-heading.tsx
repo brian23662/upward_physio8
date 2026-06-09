@@ -58,21 +58,21 @@ export function SectionHeading({
   );
 }
 
-/** The upward-arrow motif from the logo, reusable as a small accent. */
+/** Small diamond accent used as the eyebrow marker above section headings. */
 export function ArrowMotif({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill="none"
       className={cn("text-sage-600", className)}
       aria-hidden="true"
     >
-      <path
-        d="M5 19c0-7 4-11 10-12m0 0-4.5 1.2M15 7l1.4 4.4"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+      <rect
+        x="7"
+        y="7"
+        width="10"
+        height="10"
+        transform="rotate(45 12 12)"
+        fill="currentColor"
       />
     </svg>
   );
