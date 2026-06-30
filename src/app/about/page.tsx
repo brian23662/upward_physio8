@@ -1,7 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Coffee, GraduationCap, MapPin, Plane, Dumbbell, Train } from "lucide-react";
+import {
+  Coffee,
+  GraduationCap,
+  MapPin,
+  Plane,
+  Dumbbell,
+  Train,
+  Bike,
+  Activity,
+  Award,
+  Users,
+} from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
@@ -16,36 +27,52 @@ export const metadata: Metadata = {
 
 const journey = [
   {
-    icon: MapPin,
-    title: "Southeast Missouri roots",
-    body: "Grew up in southeast Missouri before heading to St. Louis for graduate school.",
+    icon: GraduationCap,
+    title: "Exercise science at Southeast Missouri State",
+    body: "Earned a B.S. in Exercise Science with a minor in Nutrition, graduating Magna Cum Laude.",
   },
   {
     icon: GraduationCap,
-    title: "Doctorate from WashU",
-    body: "Earned a Doctorate of Physical Therapy from Washington University in St. Louis.",
+    title: "Doctorate from WashU in St. Louis",
+    body: "Completed a Doctor of Physical Therapy degree at Washington University in St. Louis in 2020.",
   },
   {
     icon: Dumbbell,
     title: "Outpatient ortho & sports in DC",
-    body: "Four years in Washington, DC outpatient orthopedics and sports medicine, plus a night-and-weekend in-home caseload.",
+    body: "Began his career in Washington, DC helping people of all ages recover from injury, navigate post-op rehab, and return to sport — alongside an in-home, one-on-one caseload.",
   },
   {
     icon: Train,
     title: "Launched WMATA's first prevention program",
-    body: "Spent a year building and launching the first preventative therapy program for Metro (WMATA) employees across DC, Maryland, and Virginia.",
+    body: "Developed the first preventative physical therapy program for DC's Metro (WMATA), reducing workplace injuries and improving long-term musculoskeletal health for hundreds of employees.",
   },
   {
     icon: MapPin,
-    title: "Now leading in Denver",
-    body: "Moved to Denver, where he now directs an occupational health clinic and founded Upward.",
+    title: "Now serving Denver",
+    body: "Relocated to Denver in 2025 with his wife Emily, where he founded Upward and provides one-on-one physical therapy and performance services.",
   },
 ];
 
 const hobbies = [
   { icon: Plane, label: "Traveling" },
-  { icon: Coffee, label: "Coffee shops & breweries" },
+  { icon: Coffee, label: "Restaurants & coffee shops" },
   { icon: Dumbbell, label: "Weightlifting" },
+  { icon: Activity, label: "Basketball" },
+  { icon: Bike, label: "Cycling & running" },
+];
+
+const certifications = [
+  "Doctor of Physical Therapy (DPT), Washington University in St. Louis",
+  "Certified Strength & Conditioning Specialist (CSCS), NSCA",
+  "USA Weightlifting Level 1 Coach (USAW)",
+  "Colorado & Washington, DC Physical Therapy Licenses (compact privileges in MD & VA)",
+  "American Heart Association BLS for Healthcare Providers (CPR & AED)",
+];
+
+const memberships = [
+  "American Physical Therapy Association — Colorado chapter (orthopedic & sports sections)",
+  "National Strength and Conditioning Association",
+  "USA Weightlifting Coaches Association",
 ];
 
 export default function AboutPage() {
@@ -57,7 +84,7 @@ export default function AboutPage() {
         description="Upward is built around one belief: the right movement, taught the right way, changes how you live."
       />
 
-      {/* Intro: headshot + bio */}
+      {/* Intro: personal Colorado headshot + bio */}
       <section className="container py-24">
         <div className="grid items-start gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
@@ -65,8 +92,8 @@ export default function AboutPage() {
               <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-sage-gradient opacity-15 blur-2xl" />
               <div className="overflow-hidden rounded-[1.75rem] shadow-lift">
                 <Image
-                  src={siteConfig.founder.headshot}
-                  alt={`${siteConfig.founder.name}, ${siteConfig.founder.credentials}`}
+                  src={siteConfig.founder.coloradoPortrait}
+                  alt={`${siteConfig.founder.name} in the Colorado mountains`}
                   width={1000}
                   height={1250}
                   className="h-full w-full object-cover"
@@ -92,24 +119,37 @@ export default function AboutPage() {
             />
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I&apos;m DJ Keim, founder of Upward Physio and Performance. My
-                approach is movement-focused: I use targeted exercise and
-                education to teach you the strategies, exercises, and habits that
-                get you out of pain and prevent recurring injury. When it helps, I
-                layer in hands-on techniques and modalities to restore pain-free
-                movement.
+                I&apos;m DJ Keim, founder of Upward Physio and Performance. With
+                over six years of experience as a physical therapist, I enjoy
+                helping individuals stay strong, active, and healthy throughout
+                every stage of life. I began my career in Washington, DC, helping
+                people of all ages recover from injuries, navigate post-operative
+                rehabilitation, return to sport, and regain confidence in the
+                activities they love.
               </p>
               <p>
-                I&apos;m also a Certified Strength and Conditioning Specialist
-                (CSCS), which shapes how I think about both rehab and performance
-                — getting you out of pain is only half the job; building a body
-                that stays resilient is the other half.
+                I later developed the first preventative physical therapy program
+                for the Washington Metropolitan Area Transit Authority (WMATA),
+                focusing on reducing workplace injuries and improving long-term
+                musculoskeletal health for hundreds of employees. After relocating
+                to Denver in 2025 with my wife Emily, I continue to serve the
+                community through personalized, one-on-one physical therapy and
+                performance services — both in-clinic and in the comfort of
+                clients&apos; homes.
               </p>
               <p>
-                A year spent launching the first preventative therapy program for
-                Metro (WMATA) employees sparked a real passion for occupational
-                health and injury prevention. It&apos;s why Upward serves both
-                individuals and employers.
+                I believe physical therapy should go beyond addressing pain and
+                injury by equipping people with the strength, knowledge, and
+                confidence to remain active for life. My approach blends
+                evidence-based physical therapy, strength and conditioning
+                principles, and individualized coaching to help clients recover,
+                prevent future injuries, improve performance, and keep doing what
+                they love.
+              </p>
+              <p>
+                Outside the clinic and gym, I love exploring Colorado with Emily
+                and our dog Minnie. I stay active through weightlifting,
+                basketball, cycling, and running.
               </p>
             </div>
 
@@ -139,8 +179,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Journey timeline */}
+      {/* Intro video */}
       <section className="bg-muted py-24">
+        <div className="container">
+          <SectionHeading
+            eyebrow="A quick hello"
+            title="Meet DJ in his own words"
+            description="A short introduction to who DJ is, how he works, and what makes Upward different."
+          />
+          <Reveal>
+            <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-[1.75rem] shadow-lift">
+              <video
+                className="aspect-video h-full w-full bg-navy-900 object-cover"
+                controls
+                playsInline
+                preload="metadata"
+                poster={siteConfig.founder.portrait}
+              >
+                <source src="/video/dj-intro.mp4" type="video/mp4" />
+                Your browser doesn&apos;t support embedded video.
+              </video>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Journey timeline */}
+      <section className="py-24">
         <div className="container">
           <SectionHeading
             eyebrow="The path here"
@@ -166,6 +231,60 @@ export default function AboutPage() {
                 );
               })}
             </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials & memberships */}
+      <section className="bg-muted py-24">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Credentials"
+            title="Education, certifications & memberships"
+            description="The training and professional standards behind every Upward session."
+          />
+          <div className="mx-auto mt-14 grid max-w-4xl gap-10 md:grid-cols-2">
+            <Reveal>
+              <div className="rounded-[1.5rem] border border-border bg-card p-8 shadow-card">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sage-gradient text-white">
+                    <Award className="h-5 w-5" />
+                  </span>
+                  <h3 className="font-display text-xl font-bold text-navy dark:text-white">
+                    Licensure & certifications
+                  </h3>
+                </div>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  {certifications.map((c) => (
+                    <li key={c} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sage-500" />
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+
+            <Reveal delayIndex={1}>
+              <div className="rounded-[1.5rem] border border-border bg-card p-8 shadow-card">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sage-gradient text-white">
+                    <Users className="h-5 w-5" />
+                  </span>
+                  <h3 className="font-display text-xl font-bold text-navy dark:text-white">
+                    Organizational memberships
+                  </h3>
+                </div>
+                <ul className="mt-6 space-y-3 text-muted-foreground">
+                  {memberships.map((m) => (
+                    <li key={m} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sage-500" />
+                      <span>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
