@@ -9,16 +9,28 @@ import { siteConfig } from "@/lib/site";
 export function Hero() {
   return (
     <section className="relative flex min-h-[92vh] items-center overflow-hidden">
-      {/* Background video + poster */}
+      {/* Background video + poster — responsive sources.
+          Desktop gets the original wide (landscape) clip; mobile gets the
+          cropped vertical clip that fills a portrait viewport cleanly. */}
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
         autoPlay
         muted
         loop
         playsInline
         poster="/images/hero-poster.webp"
       >
-        <source src="/video/hero-bg.mp4" type="video/mp4" />
+        <source src="/video/hero-bg-desktop.mp4" type="video/mp4" />
+      </video>
+      <video
+        className="absolute inset-0 block h-full w-full object-cover md:hidden"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/hero-poster.webp"
+      >
+        <source src="/video/hero-bg-mobile.mp4" type="video/mp4" />
       </video>
 
       {/* Navy gradient scrim for legibility */}
