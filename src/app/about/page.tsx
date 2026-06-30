@@ -12,6 +12,7 @@ import {
   Activity,
   Award,
   Users,
+  Briefcase,
 } from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -48,8 +49,13 @@ const journey = [
   },
   {
     icon: MapPin,
-    title: "Now serving Denver",
-    body: "Relocated to Denver in 2025 with his wife Emily, where he founded Upward and provides one-on-one physical therapy and performance services.",
+    title: "Relocated to Denver",
+    body: "Moved to Denver in 2025 with his wife Emily, and founded Upward to provide one-on-one physical therapy and performance services.",
+  },
+  {
+    icon: Briefcase,
+    title: "Center Therapy Director, occupational health",
+    body: "Serves as Center Therapy Director at Medicine for Business and Industry in Englewood, CO — leading clinical operations and on-site rehabilitation focused on occupational health, injury prevention, and safe return-to-work outcomes.",
   },
 ];
 
@@ -114,41 +120,53 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               align="left"
-              eyebrow="Hi, I'm DJ"
+              eyebrow="Who is DJ"
               title="Doctor of Physical Therapy & Strength Coach"
             />
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I&apos;m DJ Keim, founder of Upward Physio and Performance. With
-                over six years of experience as a physical therapist, I enjoy
-                helping individuals stay strong, active, and healthy throughout
-                every stage of life. I began my career in Washington, DC, helping
-                people of all ages recover from injuries, navigate post-operative
+                DJ earned his Bachelor of Science in Exercise Science with a minor
+                in Nutrition from Southeast Missouri State University before
+                completing his Doctor of Physical Therapy degree at Washington
+                University in St. Louis in 2020.
+              </p>
+              <p>
+                With over six years of experience as a physical therapist, DJ
+                enjoys helping individuals stay strong, active, and healthy
+                throughout every stage of life. He began his career in Washington,
+                DC, at Orthopedic Medicine and Surgery, where he helped people of
+                all ages recover from injuries, navigate post-operative
                 rehabilitation, return to sport, and regain confidence in the
                 activities they love.
               </p>
               <p>
-                I later developed the first preventative physical therapy program
+                He later developed the first preventative physical therapy program
                 for the Washington Metropolitan Area Transit Authority (WMATA),
-                focusing on reducing workplace injuries and improving long-term
-                musculoskeletal health for hundreds of employees. After relocating
-                to Denver in 2025 with my wife Emily, I continue to serve the
-                community through personalized, one-on-one physical therapy and
-                performance services — both in-clinic and in the comfort of
-                clients&apos; homes.
+                DC&apos;s metro system, focusing on reducing workplace injuries and
+                improving long-term musculoskeletal health for hundreds of
+                employees.
               </p>
               <p>
-                I believe physical therapy should go beyond addressing pain and
-                injury by equipping people with the strength, knowledge, and
-                confidence to remain active for life. My approach blends
-                evidence-based physical therapy, strength and conditioning
-                principles, and individualized coaching to help clients recover,
-                prevent future injuries, improve performance, and keep doing what
-                they love.
+                After relocating to Denver in 2025 with his wife Emily, DJ
+                continues to serve the Denver community through personalized, one
+                on one physical therapy and performance services at Momenta and in
+                the comfort of clients&apos; homes.
               </p>
               <p>
-                Outside the clinic and gym, I love exploring Colorado with Emily
-                and our dog Minnie. I stay active through weightlifting,
+                DJ is passionate about helping people move better and live without
+                limitations. He believes physical therapy should go beyond
+                addressing pain and injury by equipping individuals with the
+                strength, knowledge, and confidence to remain active throughout
+                every stage of life. His approach blends evidence-based physical
+                therapy, strength and conditioning principles, and individualized
+                coaching to help clients recover, prevent future injuries, improve
+                performance and continue doing what they love.
+              </p>
+              <p>
+                Outside of the clinic and gym, DJ enjoys exploring Colorado with
+                his wife Emily and their dog Minnie. Together they enjoy traveling,
+                discovering new restaurants and coffee shops, and spending time
+                with family and friends. DJ stays active through weightlifting,
                 basketball, cycling, and running.
               </p>
             </div>
