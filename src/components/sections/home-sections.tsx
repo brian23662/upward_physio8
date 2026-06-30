@@ -212,6 +212,14 @@ export function WhyUpward() {
                 className="h-full w-full object-cover"
               />
             </div>
+            <div className="absolute -bottom-5 left-5 rounded-2xl bg-card px-6 py-4 shadow-card">
+              <div className="font-display text-lg font-bold text-navy dark:text-white">
+                {siteConfig.founder.name}
+              </div>
+              <div className="text-sm text-sage-700 dark:text-sage-400">
+                {siteConfig.founder.role}
+              </div>
+            </div>
           </div>
         </Reveal>
       </div>
