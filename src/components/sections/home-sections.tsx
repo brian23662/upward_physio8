@@ -17,6 +17,7 @@ import {
   avenues,
   corporateBenefits,
   services,
+  siteConfig,
   stats,
   testimonials,
 } from "@/lib/site";
@@ -204,10 +205,10 @@ export function WhyUpward() {
             <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-sage-gradient opacity-15 blur-2xl" />
             <div className="overflow-hidden rounded-[1.75rem] shadow-lift">
               <Image
-                src="/images/dj-treatment-room.webp"
-                alt="DJ Keim working with a patient in a bright, window-lined treatment room"
-                width={1600}
-                height={724}
+                src={siteConfig.founder.portrait}
+                alt={`${siteConfig.founder.name}, ${siteConfig.founder.credentials} — founder of Upward Physio and Performance`}
+                width={1000}
+                height={1250}
                 className="h-full w-full object-cover"
               />
             </div>
