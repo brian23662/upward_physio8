@@ -21,7 +21,12 @@ export const siteConfig = {
     name: "DJ Keim",
     credentials: "DPT, CSCS",
     role: "Doctor of Physical Therapy · Founder",
+    // Studio portrait used on the home/index page.
     headshot: "/images/daniel-headshot.webp",
+    // Polo/garden portrait — DJ's "professional" headshot.
+    portrait: "/images/dj-portrait-polo.webp",
+    // Hat-on-the-mountain shot — DJ's personal "Colorado vibe" image, used in the About section.
+    coloradoPortrait: "/images/dj-colorado.webp",
   },
 };
 
