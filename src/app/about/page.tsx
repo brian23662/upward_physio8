@@ -54,8 +54,8 @@ const journey = [
   },
   {
     icon: Briefcase,
-    title: "Center Therapy Director, occupational health",
-    body: "Serves as Center Therapy Director at Medicine for Business and Industry in Englewood, CO — leading clinical operations and on-site rehabilitation focused on occupational health, injury prevention, and safe return-to-work outcomes.",
+    title: "Occupational health in Denver",
+    body: "Works with Medicine for Business and Industry, Denver, CO, delivering on-site rehabilitation focused on occupational health, injury prevention, and safe return-to-work outcomes.",
   },
 ];
 
@@ -149,8 +149,10 @@ export default function AboutPage() {
               <p>
                 After relocating to Denver in 2025 with his wife Emily, DJ
                 continues to serve the Denver community through personalized, one
-                on one physical therapy and performance services at Momenta and in
-                the comfort of clients&apos; homes.
+                on one physical therapy and performance services at Momenta
+                Fitness and in the comfort of clients&apos; homes. Momenta Fitness
+                is a boutique gym with top-of-the-line equipment as well as on-site
+                massage, Pilates, and personal training.
               </p>
               <p>
                 DJ is passionate about helping people move better and live without
